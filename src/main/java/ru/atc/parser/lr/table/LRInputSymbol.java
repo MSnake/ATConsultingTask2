@@ -61,7 +61,7 @@ public final class LRInputSymbol implements Comparable<LRInputSymbol> {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(_symbol).append(_isTerminal).append(_isEndOfInput).hashCode();
+        return HashCodeBuilder.reflectionHashCode(17,37,this);
     }
 
     @Override
