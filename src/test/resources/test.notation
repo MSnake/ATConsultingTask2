@@ -1,0 +1,43 @@
+EXPR:
+          TERM
+        | EXPR  '+'  TERM
+        | EXPR  '-'  TERM
+  ;
+
+TERM:
+          REAL
+        | TERM  '*'  REAL
+        | TERM  '/'  REAL
+  ;
+
+// Действительное число
+REAL:
+          FLOAT
+        | '-'  FLOAT
+  ;
+
+// Число с плавающей точкой
+FLOAT:
+          NUMBER
+        | NUMBER  '.'  NUMBER
+  ;
+
+// Целое число
+NUMBER:
+          DIGIT
+        | NUMBER  DIGIT
+  ;
+
+// Числовой символ
+DIGIT:
+          '0'
+        | '1'
+        | '2'
+        | '3'
+        | '4'
+        | '5'
+        | '6'
+        | '7'
+        | '8'
+        | '9'
+  ;
